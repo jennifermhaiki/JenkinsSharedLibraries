@@ -15,9 +15,9 @@ def call(String stageName){
        sh "echo packing up to Nexus"
        //sh "mvn clean deploy"
      }
-  else if ("${stageName}" == "Deoploy to Tomcat")
+  else if ("${stageName}" == "Deploy to Tomcat")
      {
        sh "echo deploying to Tomcat"
-       deploy adapters: [tomcat9(credentialsId: '35895ddc-28e7-4a5c-8085-5fa7e6d89457', path: '', url: 'http://54.184.60.63:9000/')], contextPath: null, war: 'target/*.war'       
+       //deploy adapters: [tomcat9(credentialsId: '35895ddc-28e7-4a5c-8085-5fa7e6d89457', path: '', url: 'http://54.184.60.63:9000/')], contextPath: null, war: 'target/*.war'       
      }
 }
